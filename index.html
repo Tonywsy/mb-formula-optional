@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>葵爸 · 奶粉可选成分详解</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#222; line-height:1.7; }
+  .wrap { max-width:960px; margin:0 auto; padding:24px 16px 60px; }
+  header { text-align:center; padding:30px 0 10px; }
+  header h1 { font-size:27px; font-weight:800; letter-spacing:1px; }
+  header .sub { color:#888; margin-top:6px; font-size:14px; }
+  .section { background:#fff; border-radius:14px; padding:22px; margin:18px 0; box-shadow:0 2px 12px rgba(0,0,0,.05); }
+  .section h2 { font-size:20px; border-left:4px solid #1E5AA8; padding-left:10px; margin-bottom:6px; }
+  .section-desc { color:#666; font-size:14px; margin-bottom:14px; }
+  .callout { border-radius:10px; padding:12px 14px; margin-top:12px; font-size:14px; }
+  .callout.blue { background:#eef4fc; border-left:4px solid #1E5AA8; }
+  .callout.warn { background:#fff4e6; border-left:4px solid #E67E22; }
+  .callout.green { background:#eafaf0; border-left:4px solid #27AE60; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; }
+  .card { border:1px solid #eee; border-radius:12px; padding:14px; }
+  .card h3 { font-size:15px; margin-bottom:4px; color:#1E5AA8; }
+  .card .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:20px; background:#eef4fc; color:#1E5AA8; margin-bottom:6px; }
+  .card p { font-size:13px; color:#555; }
+  .card .rng { font-size:12px; color:#C0392B; margin-top:6px; font-weight:700; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin-top:8px; }
+  th,td { border:1px solid #e8e8e8; padding:9px 10px; text-align:center; }
+  th { background:#1E5AA8; color:#fff; font-weight:600; }
+  tr:nth-child(even) td { background:#fafcff; }
+  td.hl { background:#fff4e6 !important; font-weight:700; }
+  .y { color:#27AE60; font-weight:700; } .n { color:#C0392B; font-weight:700; }
+  .muted { color:#999; }
+  .range-box { width:100%; height:420px; }
+  .disclaimer { font-size:12px; color:#999; margin-top:18px; padding:14px; background:#f7f7f7; border-radius:10px; }
+  .pill { display:inline-block; background:#1E5AA8; color:#fff; font-size:12px; padding:2px 10px; border-radius:20px; margin-right:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>奶粉「可选成分」详解</h1>
+    <div class="sub">成分科普 · 依据《中国居民膳食指南（2022）》＋新国标 GB 10765 / 10766 / 10767-2021（营养强化剂按 GB 14880）· 更新 2026-08</div>
+  </header>
+
+  <!-- 核心认知 -->
+  <div class="section">
+    <h2>一句话先讲透</h2>
+    <div class="callout blue">
+      买奶粉常听到"可选成分"这个词。先讲透一句：婴配粉的<b>合格底线</b>是「基础配方」——蛋白质、脂肪、碳水化合物、维生素、矿物质（钙铁锌等）达标即可。<br>
+      在此之外的，才是 <b>可选择成分（国标称「可选择性成分」）</b>——<b>加了是加分，不加原则上不违规</b>。所以"加得多"≠"更好"，也别为它盲目多花钱。但"不违规"不等于"都一样好"，而且有个<b>段位前提</b>，往下看。
+    </div>
+  </div>
+
+  <!-- 膳食指南视角 -->
+  <div class="section">
+    <h2>先立标尺：《中国居民膳食指南（2022）》怎么说</h2>
+    <p class="section-desc">本页所有结论，先以《中国居民膳食指南（2022）》及配套《中国婴幼儿喂养指南（2022）》为"喂养总纲"，再以新国标为"配方底线"。两者分工不同：<b>指南解决"喂什么、怎么喂"，新国标解决"配方最低安全营养底线"。</b></p>
+    <div class="callout blue">
+      <b>📌 指南核心（与选奶粉直接相关）：</b><br>
+      ① <b>0–6 月龄：母乳是婴儿最理想的食物，坚持纯母乳喂养。</b>任何婴儿配方奶都不能与母乳相媲美，只能作为母乳喂养失败后的无奈选择、或母乳不足时的补充；<b>严禁用普通液态奶、成人奶粉、豆奶粉替代</b>（婴儿肾脏未发育成熟，普通奶矿物质/蛋白过高）。<br>
+      ② <b>母乳自带"益生元"</b>——母乳中的低聚糖能促进肠道益生菌生长。这正是配方中"益生元（GOS/FOS）＋益生菌"方向的来源，本质是<b>模拟母乳</b>，而非凭空创造。<br>
+      ③ <b>7–24 月龄：继续母乳喂养，满 6 月龄起加辅食，奶量不减（约 600–800 mL/日）。</b><br>
+      ④ <b>13–36 月龄（即 3 段对应年龄）：可引入全脂纯牛奶；</b>健康足月儿 1 岁后即可饮全脂牛奶——说明 3 段配方奶是"选项之一"，<b>并非唯一或必需</b>。<br>
+      ⑤ <b>0–1 岁乳清蛋白占蛋白质比例宜 ≥60%</b>（新国标亦要求乳基婴儿配方乳清蛋白 ≥60%）。
+    </div>
+    <div class="callout green">
+      <b>结论前置：</b>对 0–6 月，母乳第一、配方奶是补充；对 1 岁以上，全脂牛奶也可行。所谓"可选成分"，是在这层底线之上、品牌用来"模拟母乳/锦上添花"的加分项——<b>它不是刚需，也不该为它溢价买单。</b>
+    </div>
+  </div>
+
+  <!-- 读懂可选成分 -->
+  <div class="section">
+    <h2>读懂"可选成分"：合格是底线，不是最优</h2>
+    <p class="section-desc">国标把婴配粉成分分成「必需成分」和「可选择性成分」。但"不加也合规"有个关键前提——<b>段位</b>。新国标（2023-02-22 实施）把 <b>胆碱、锰、硒在 0–12 月升为必需成分</b>（缺了反而不合格）；<b>DHA 在 1/2 段虽列于"可选择性成分"表，但被要求强制添加且设下限 3.6</b>。还有少数成分（OPO、核苷酸、膳食纤维、乳铁蛋白、叶黄素、CPP）由营养强化剂标准 GB 14880 管添加量，国标只规定"能否加、来源是否合规"，不逐一设 per-100kJ 上下限。</p>
+    <table>
+      <tr><th>成分</th><th>0–6月（1段）</th><th>6–12月（2段）</th><th>12–36月（3段）</th><th>不添加是否合规？</th></tr>
+      <tr><td><b>胆碱</b></td><td class="n">必需 4.8–23.9 mg</td><td class="n">必需 4.8–23.9 mg</td><td>可选 4.8–23.9 mg</td><td class="n">1/2段：否</td></tr>
+      <tr><td><b>锰</b></td><td>必需 0.72–23.90 µg</td><td>必需 0.24–23.90 µg</td><td>可选 0.24–23.90 µg</td><td class="n">1/2段：否</td></tr>
+      <tr><td><b>硒</b></td><td>必需 0.72–2.06 µg</td><td>必需 0.48–2.06 µg</td><td>可选 0.48–2.06 µg</td><td class="n">1/2段：否</td></tr>
+      <tr><td><b>DHA</b></td><td class="n">强制添加 3.6–9.6 mg</td><td class="n">强制添加 3.6–9.6 mg</td><td>可选 N.S.–9.6 mg</td><td class="n">1/2段：否（须添加）</td></tr>
+      <tr><td>肌醇 / 牛磺酸 / 左旋肉碱 / ARA / OPO / 膳食纤维 / 核苷酸 / 乳铁蛋白 / 叶黄素 / CPP / 益生菌 / 单体氨基酸等</td><td>可选</td><td>可选</td><td>可选</td><td class="y">是</td></tr>
+    </table>
+    <div class="callout warn">
+      <b>📌 一句话记住：</b>1 段 2 段里 <b>胆碱、锰、硒是国标必需成分</b>，DHA 是<b>强制添加</b>（下限 3.6），"完全没有"反而不合格；胆碱/锰/硒到 3 段才变可选，DHA 在 3 段也恢复可选。看奶粉先看段位，别拿一句话套所有段。
+    </div>
+    <div class="callout blue">
+      <b>学界共识：</b>母乳是金标准，配方只需"安全+充足"，<b>合规≠最优</b>；DHA/胆碱强制化与国际（CAC/ESPGHAN）趋势一致、有循证基础；乳铁蛋白/核苷酸/HMO/唾液酸等高端成分的额外获益证据等级不一，学界普遍"安全≠有效、不为概念溢价"。结论：按宝宝个体情况（过敏、消化、发育）选配方，比追"加得多"更科学。
+    </div>
+  </div>
+
+  <!-- 全景卡片 -->
+  <div class="section">
+    <h2>可选择性成分全景（按功能分组）</h2>
+    <p class="section-desc">下表为新国标体系（GB 10765/10766/10767-2021 及 GB 14880 营养强化剂规定）列明的<b>可选择性成分</b>。标 ⚠️ 的功效多来自「品牌方宣称 / 学术假说」，国标只管"能不能加、加多少、来源合不合规"，不背书"加了就一定有用"。胆碱/锰/硒虽在 3 段为可选择性，但在 1/2 段属必需，已在上方标红。</p>
+    <div class="cards" id="cards"></div>
+    <div class="callout warn" style="margin-top:14px">
+      <b>⚠️ 特别说明：</b>唾液酸（N-乙酰神经氨酸）<b>不是</b>国标列明的可选择性成分——它主要靠乳清蛋白、乳源低聚糖等<b>乳源带入</b>，少数品牌会额外添加；国标未对其设添加量要求，相关功效多属品牌宣称，切勿与上面这些"国标可选择性成分"混为一谈。
+    </div>
+  </div>
+
+  <!-- 范围可视化 -->
+  <div class="section">
+    <h2>新国标「每 100kJ」范围可视化（营养素类）</h2>
+    <p class="section-desc">带明确数值范围的<b>营养素类</b>可选择性成分，用区间条展示（单位 <b>mg/100kJ</b>，罐身直标值）。N.S.=无特别说明（国标不设下限，品牌自行决定）。胆碱/锰/硒在 1 段 2 段属「必需」范围，此处展示其在 3 段的可选范围；<b>锰、硒单位为 µg/100kJ，量级不同，单列于下方段位对照表，不混入本图</b>。</p>
+    <div id="range" class="range-box"></div>
+    <div class="callout warn">
+      ⚠️ 注意 <b>左旋肉碱</b> 上限为 N.S.（国标不封顶，图中取示意上限 5.0）；<b>ARA</b> 区间最宽，因 DHA:ARA 要求「添加 DHA 时 ARA≥DHA」，但 ARA 本身上限给到 19.1；<b>OPO、膳食纤维、核苷酸、乳铁蛋白、叶黄素、CPP</b> 等因按 GB 14880 以"每 kg 粉剂"管理添加量，不在此 per-100kJ 图中，详见段位对照表与卡片。
+    </div>
+  </div>
+
+  <!-- 段位对照表 -->
+  <div class="section">
+    <h2>可选择性成分 · 段位与新国标范围</h2>
+    <p class="section-desc">核心纪律：<b>段位绝不混用</b>。胆碱在 0–6 月（1 段）、6–12 月（2 段）是<b>必需</b>，到 3 段才变可选；DHA 在 1/2 段强制带下限，3 段只设上限；锰、硒在 1/2 段为必需、3 段恢复可选。OPO、核苷酸、膳食纤维、乳铁蛋白、叶黄素、CPP 由 GB 14880 管添加量（每 kg 粉剂）。</p>
+    <table id="matrix"></table>
+  </div>
+
+  <!-- 新旧国标变化 -->
+  <div class="section">
+    <h2>新国标（2023 实施）关键变化</h2>
+    <table>
+      <tr><th>维度</th><th>旧国标</th><th>新国标</th></tr>
+      <tr><td>DHA</td><td>可不选（%总脂肪酸计）</td><td class="hl">1/2 段强制添加 + 下限 3.6 mg/100kJ（改为每100kJ计量）；3 段 N.S.–9.6</td></tr>
+      <tr><td>胆碱</td><td>可选择（1.7–12.0 mg/100kJ）</td><td class="hl">0–6 月（1 段）、6–12 月（2 段）列为<b>必需</b>（4.8–23.9）；3 段可选 4.8–23.9</td></tr>
+      <tr><td>锰 / 硒</td><td>1 段即必需；2 段可选→新升必需</td><td class="hl">1 段、2 段均为<b>必需</b>；3 段恢复为可选择性成分</td></tr>
+      <tr><td>蔗糖 / 香兰素</td><td>限制较松</td><td class="hl">1 段禁蔗糖、严格限香兰素</td></tr>
+      <tr><td>蛋白比例</td><td>—</td><td>乳基婴儿配方乳清蛋白 ≥60%，更贴近母乳</td></tr>
+    </table>
+    <div class="callout warn">⚠️ <b>OPO 结构脂确是「可选择性成分」之一</b>——国标名称为「1,3-二油酸-2-棕榈酸甘油三酯」，属通过植物油酯交换模拟母乳脂肪结构的<b>结构化脂肪</b>。与 DHA/胆碱 等营养素不同，国标未对它设 mg/100kJ 上下限，而是由 GB 14880 按"每 kg 粉剂"管理（婴儿 32–96 g/kg、较大婴儿/幼儿 24–96 g/kg）。功能上能减少钙皂、软化大便，常被误当成"营养素的加分项"，本质上属「特色脂肪结构」类可选项。</div>
+  </div>
+
+  <!-- 读罐身 -->
+  <div class="section">
+    <h2>怎么读罐身：mg/100kJ 与 mg/100g</h2>
+    <p class="section-desc">罐身通常两列都标，别搞混：</p>
+    <table>
+      <tr><th>单位</th><th>含义</th><th>怎么用</th></tr>
+      <tr><td class="hl">mg/100kJ</td><td>每 100 千焦能量里的含量</td><td><b>直标值，优先看这个</b>，跨品牌公平</td></tr>
+      <tr><td>mg/100g</td><td>每 100 克奶粉里的含量</td><td>换算近似值，受能量影响</td></tr>
+    </table>
+    <div class="callout green">
+      <b>换算公式：</b>mg/100g ≈ mg/100kJ ×（100g 能量 kJ ÷ 100）。<br>
+      奶粉能量约 2000–2150 kJ/100g，系数约 <b>20–21.5</b>。<br>
+      例：DHA 标 5.9 mg/100kJ → 约 5.9 × 21.3 ≈ <b>125 mg/100g</b>（与市面实测一致）。
+    </div>
+  </div>
+
+  <!-- 对号入座 -->
+  <div class="section">
+    <h2>选购建议：按宝宝需求看成分</h2>
+    <p class="section-desc">没有"最好的奶粉"，只有"最对路的配方"。可选成分是对症加分项，不是必选项。</p>
+    <table>
+      <tr><th>你在意什么</th><th>优先看的可选成分</th><th>说明</th></tr>
+      <tr><td class="dim">脑 / 眼发育</td><td><b>DHA + ARA、胆碱、牛磺酸、叶黄素</b></td><td>DHA 已强制（1/2段下限3.6），重点看是否达到中高位、ARA 是否≥DHA</td></tr>
+      <tr><td class="dim">肠道 / 便便</td><td><b>益生元（GOS/FOS）、益生菌、OPO（特色脂肪）</b></td><td>益生元增殖双歧杆菌；OPO 软化大便（属特色脂肪结构）</td></tr>
+      <tr><td class="dim">免疫（品牌宣称）</td><td><b>乳铁蛋白、核苷酸、酵母β-葡聚糖⚠️</b></td><td>含量非越高越好，学界有审慎讨论，按需不追高；酵母β-葡聚糖仅限3段</td></tr>
+      <tr><td class="dim">普通健康宝宝</td><td><b>基础配方达标即可</b></td><td>可选成分"锦上添花"，不必为"加得多"溢价</td></tr>
+      <tr><td class="dim">早产 / 低体重 / 过敏</td><td><b>遵医嘱</b></td><td>特殊医学用途配方另走通道，不靠普通奶粉堆成分</td></tr>
+    </table>
+    <div class="callout warn">
+      <b>📌 最后 3 句大实话：</b>① 可选成分≠必需，没有也合规，别为"加得多"多花冤枉钱；② 含量不是越高越好（乳铁蛋白等学界有审慎讨论），看是否对症；③ 换奶 / 加新成分留 7–14 天观察期，异常及时咨询医生。
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    免责声明：本页以《中国居民膳食指南（2022）》及配套《中国婴幼儿喂养指南（2022）》为喂养总纲，以现行食品安全国家标准 GB 10765-2021《婴儿配方食品》、GB 10766-2021《较大婴儿配方食品》、GB 10767-2021《幼儿配方食品》（2023-02-22 实施）及 GB 14880-2012《食品营养强化剂使用标准》公开文本整理，仅作科普参考，不构成医疗建议或官方背书。各产品实际添加以罐身标签与品牌官方信息、配方注册信息为准。「品牌方宣称 / 学术假说」类表述已标注 ⚠️，请理性判断。唾液酸、MFGM、A2 蛋白、HMO 等乳源/特色成分是否列入可选择性以现行国标文本为准。
+  </div>
+</div>
+
+<script>
+// ===== 可选择性成分数据（新国标体系）=====
+// seg: 段位状态；basis: 精确范围 / 管理依据（单位已标注）
+const items = [
+  // 脑眼发育
+  { name:"胆碱", grp:"脑眼发育", fn:"促进大脑发育、提高记忆力、脂质代谢", basis:"1/2段：必需 4.8–23.9 mg/100kJ；3段：可选 4.8–23.9 mg/100kJ", note:"0–12月升为必需" },
+  { name:"肌醇", grp:"脑眼发育", fn:"细胞生长、脂肪与胆固醇代谢", basis:"全段可选 1.0–9.6 mg/100kJ", note:"" },
+  { name:"牛磺酸", grp:"脑眼发育", fn:"视力与中枢神经发育", basis:"全段可选 0.8–4.0 mg/100kJ", note:"新国标设下限（旧版无下限）" },
+  { name:"左旋肉碱", grp:"代谢供能", fn:"脂肪代谢、能量供应", basis:"全段可选 ≥0.3 mg/100kJ（上限 N.S.）", note:"" },
+  { name:"DHA", grp:"脑眼发育", fn:"脑与视力发育关键脂肪酸", basis:"1/2段：强制添加 3.6–9.6；3段：可选 N.S.–9.6 mg/100kJ", note:"新国标强制+下限" },
+  { name:"ARA/AA", grp:"脑眼发育", fn:"与 DHA 协同，脑发育", basis:"全段可选 N.S.–19.1 mg/100kJ", note:"添加 DHA 时要求 ARA≥DHA" },
+  { name:"叶黄素", grp:"脑眼发育", fn:"护眼（品牌方宣称）", basis:"可选择性；按 GB 14880 限量：婴儿 300–2000 µg/kg、较大婴儿/幼儿 1620–4230 µg/kg（每 kg 粉剂）", note:"单位非 mg/100kJ" },
+  // 肠道消化
+  { name:"低聚半乳糖 GOS", grp:"肠道消化", fn:"益生元，增殖双歧杆菌", basis:"可选择性；按 GB 14880 限量（低聚半乳糖等总量 ≤64.5 g/kg）", note:"每 kg 粉剂" },
+  { name:"低聚果糖 FOS", grp:"肠道消化", fn:"益生元，调节肠道菌群", basis:"可选择性；按 GB 14880 限量", note:"每 kg 粉剂" },
+  { name:"多聚果糖 / 棉子糖 / 聚葡萄糖", grp:"肠道消化", fn:"水溶性膳食纤维（益生元）", basis:"可选择性；按 GB 14880 限量", note:"每 kg 粉剂" },
+  { name:"OPO 结构脂", grp:"肠道消化", fn:"1,3-二油酸-2-棕榈酸甘油三酯，减少钙皂、软化大便", basis:"可选择性（结构化脂肪）；按 GB 14880 限量：婴儿 32–96 g/kg、较大婴儿/幼儿 24–96 g/kg", note:"每 kg 粉剂" },
+  { name:"益生菌", grp:"肠道消化", fn:"特定菌种（动物双歧杆菌、乳双歧杆菌等，须来自国家卫健委菌种名单）", basis:"可选择性；活菌数 ≥10⁶ CFU/g(mL)；嗜酸乳杆菌 NCFM 仅限 1 岁以上（幼儿段）", note:"菌种须合规" },
+  // 免疫
+  { name:"核苷酸", grp:"免疫", fn:"生长发育、肠道与免疫", basis:"可选择性；按 GB 14880，以核苷酸总量计 0.12–0.58 g/kg（每 kg 粉剂）", note:"" },
+  { name:"乳铁蛋白", grp:"免疫", fn:"铁转运、抗菌（高端卖点）", basis:"可选择性；按 GB 14880 ≤1.0 g/kg（婴儿配方，每 kg）", note:"非越高越好" },
+  { name:"CPP 酪蛋白钙肽/磷酸肽", grp:"免疫", fn:"促进矿物元素吸收（品牌方宣称）", basis:"可选择性；按 GB 14880 ≤3.0 g/kg（每 kg 粉剂）", note:"" },
+  { name:"酵母β-葡聚糖", grp:"免疫⚠️", fn:"免疫调节（品牌方宣称）", basis:"可选择性，仅限 幼儿段（3段）；1段/2段不添加", note:"⚠️ 宣称功效" },
+  { name:"单体氨基酸", grp:"免疫", fn:"L-组氨酸、L-蛋氨酸等 7 种（改善蛋白质质量）", basis:"可选择性（7种单体氨基酸）", note:"GB 10765/10766/10767 规定" },
+];
+
+document.getElementById('cards').innerHTML = items.map(i=>`
+  <div class="card">
+    <span class="tag">${i.grp}</span>
+    <h3>${i.name}</h3>
+    <p>${i.fn}</p>
+    <div class="rng">${i.basis}</div>
+    ${i.note?`<div class="muted" style="font-size:11px;margin-top:4px">${i.note}</div>`:''}
+  </div>`).join('');
+
+// ===== 区间条（营养素类，单位 mg/100kJ）=====
+const barData = [
+  { name:"肌醇",       min:1.0, max:9.6 },
+  { name:"牛磺酸",     min:0.8, max:4.0 },
+  { name:"左旋肉碱*",  min:0.3, max:5.0 },
+  { name:"DHA(1/2段)", min:3.6, max:9.6 },
+  { name:"ARA/AA",     min:0.0, max:19.1 },
+  { name:"胆碱(3段)",  min:4.8, max:23.9 },
+];
+const mins = barData.map(d=>d.min);
+const spans = barData.map(d=>+(d.max-d.min).toFixed(2));
+const labels = barData.map(d=>`${d.min}–${d.max}`);
+
+const range = echarts.init(document.getElementById('range'));
+range.setOption({
+  tooltip:{ trigger:'axis', axisPointer:{type:'shadow'},
+    formatter:p=>{ const i=p[0].dataIndex; return `${barData[i].name}<br/>国标范围：${labels[i]} mg/100kJ`; } },
+  grid:{ left:90, right:30, top:20, bottom:30 },
+  xAxis:{ type:'value', name:'mg/100kJ', max:25 },
+  yAxis:{ type:'category', data: barData.map(d=>d.name), inverse:true },
+  series:[
+    { name:'下限', type:'bar', stack:'r', itemStyle:{color:'transparent'}, data:mins, silent:true },
+    { name:'范围', type:'bar', stack:'r', data:spans, barWidth:'55%',
+      itemStyle:{ color:'#1E5AA8', borderRadius:[0,6,6,0] },
+      label:{ show:true, position:'right', formatter:p=>labels[p.dataIndex]+' mg', fontSize:12, color:'#333' } }
+  ]
+});
+
+// ===== 段位对照表 =====
+const rows = [
+  ["胆碱","必需 4.8–23.9 mg","必需 4.8–23.9 mg","可选 4.8–23.9 mg","0–12月升为必需；3段才可选"],
+  ["肌醇","1.0–9.6 mg","1.0–9.6 mg","1.0–9.6 mg","全段可选"],
+  ["牛磺酸","0.8–4.0 mg","0.8–4.0 mg","0.8–4.0 mg","新国标设下限"],
+  ["左旋肉碱",">0.3 mg（上限 N.S.）",">0.3 mg（上限 N.S.）",">0.3 mg（上限 N.S.）","上限无特别说明"],
+  ["DHA","强制 3.6–9.6 mg","强制 3.6–9.6 mg","可选 N.S.–9.6 mg","1/2段强制+下限；3段可选"],
+  ["ARA/AA","N.S.–19.1 mg","N.S.–19.1 mg","N.S.–19.1 mg","添加DHA时 ARA≥DHA"],
+  ["锰","必需 0.72–23.90 µg","必需 0.24–23.90 µg","可选 0.24–23.90 µg","1/2段必需；3段可选（µg）"],
+  ["硒","必需 0.72–2.06 µg","必需 0.48–2.06 µg","可选 0.48–2.06 µg","1/2段必需；3段可选（µg）"],
+  ["OPO（1,3-二油酸-2-棕榈酸甘油三酯）","可选择性","可选择性","可选择性","结构化脂肪；按 GB 14880 限量（婴儿32–96 g/kg、较大婴儿/幼儿24–96 g/kg）"],
+  ["核苷酸","可选择性","可选择性","可选择性","按 GB 14880，以核苷酸总量计 0.12–0.58 g/kg"],
+  ["膳食纤维(GOS/FOS等)","可选择性","可选择性","可选择性","按 GB 14880 限量（如低聚半乳糖等总量≤64.5 g/kg）"],
+  ["乳铁蛋白","可选择性","可选择性","可选择性","按 GB 14880 ≤1.0 g/kg（婴儿配方）"],
+  ["叶黄素","可选择性","可选择性","可选择性","按 GB 14880 婴儿300–2000 µg/kg、较大婴儿/幼儿1620–4230 µg/kg"],
+  ["CPP（酪蛋白钙肽/磷酸肽）","可选择性","可选择性","可选择性","按 GB 14880 ≤3.0 g/kg"],
+  ["单体氨基酸（7种）","可选择性","可选择性","可选择性","L-组氨酸、L-蛋氨酸等7种"],
+  ["益生菌","可选择性","可选择性","可选择性","来自卫健委菌种名单；活菌数≥10⁶ CFU/g；嗜酸乳杆菌仅限幼儿"],
+  ["酵母β-葡聚糖","—（不添加）","—（不添加）","可选择性","仅限 幼儿段（3段）"],
+];
+document.getElementById('matrix').innerHTML =
+  `<tr><th>成分</th><th>1段（0–6月）</th><th>2段（6–12月）</th><th>3段（12–36月）</th><th>备注 / 管理依据</th></tr>` +
+  rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td class="muted" style="font-size:12px">${r[4]}</td></tr>`).join('');
+
+window.addEventListener('resize',()=>{ range.resize(); });
+</script>
+</body>
+</html>
